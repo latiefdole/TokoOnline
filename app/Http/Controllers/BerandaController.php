@@ -8,8 +8,10 @@ class BerandaController extends Controller
 {
     public function berandaBackend() 
     { 
-        return view('backend.v_beranda.index', [ 
-            'judul' => 'Halaman Beranda', 
-        ]); 
+        $data= [
+            'judul' => 'Beranda Web',
+            'isi' => 'ini adalah beranda web project uas saya'
+        ];
+        return view('backend.v_beranda.index',$data);
     } 
 }
