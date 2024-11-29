@@ -45,16 +45,15 @@
                         <span class="db"><img src="{{ asset('backend/images/logo.png') }}" alt="logo" /></span>
                     </div>
                     <!-- Form -->
-                    <!-- error --> 
+                    <!-- error -->
 
-    @if(session()->has('error')) 
-    <div class="alert alert-danger alert-dismissible" role="alert"> 
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span 
-aria-hidden="true">&times;</span></button> 
-        <strong>{{ session('error')}} </strong> 
-    </div> 
-    @endif 
-    <!-- errorEnd -->
+                    @if(session()->has('error'))
+                    <div class="alert alert-danger alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <strong>{{ session('error')}} </strong>
+                    </div>
+                    @endif
+                    <!-- errorEnd -->
                     <form class="form-horizontal m-t-20" id="loginform" action="{{ route('backend.login') }}" method="post">
                         @csrf
                         <div class="row p-b-30">
@@ -139,20 +138,20 @@ aria-hidden="true">&times;</span></button>
     <!-- ============================================================== -->
     <script>
 
-    $('[data-toggle="tooltip"]').tooltip();
-    $(".preloader").fadeOut();
-    // ============================================================== 
-    // Login and Recover Password 
-    // ============================================================== 
-    $('#to-recover').on("click", function() {
-        $("#loginform").slideUp();
-        $("#recoverform").fadeIn();
-    });
-    $('#to-login').click(function(){
-        
-        $("#recoverform").hide();
-        $("#loginform").fadeIn();
-    });
+        $('[data-toggle="tooltip"]').tooltip();
+        $(".preloader").fadeOut();
+        // ============================================================== 
+        // Login and Recover Password 
+        // ============================================================== 
+        $('#to-recover').on("click", function () {
+            $("#loginform").slideUp();
+            $("#recoverform").fadeIn();
+        });
+        $('#to-login').click(function () {
+
+            $("#recoverform").hide();
+            $("#loginform").fadeIn();
+        });
     </script>
 
 </body>
